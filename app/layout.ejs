@@ -6,19 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%- title %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-  <header class="header">
-    這是 header
-  </header>
+  <div class="container d-flex">
+    <div class="sidebar bg-light py-6 d-flex flex-column justify-content-between">
+      <div>
+        <h1 class="ps-5 mb-6 fw-bold"><a href="#">answer</a></h1>
+        <ul class="sidebar__list fw-bold">
+          <li class="mb-3"><a href="#" class="d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">question_answer</span>Dashboard</a></li>
+          <li class="mb-3"><a href="#" class="d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">insert_chart</span>Question</a></li>
+          <li class="mb-3"><a href="#" class="d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">assignment</span>Assignment</a></li>
+          <li class="mb-3"><a href="#" class="d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">video_library</span>Course</a></li>
+          <li class="mb-3"><a href="index.html" class="active d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">people</span>Admin</a></li>
+          <li class="mb-3"><a href="#" class="d-flex align-items-center py-2 ps-5 text-link"><span
+                class="material-icons me-3">settings</span>Settings</a></li>
+        </ul>
+      </div>
+      <div class="ps-5 admin d-flex align-items-center">
+        <img class="admin__image me-3"
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true" alt="">
+        <div class="admin__info">
+          <h3 class="fw-bold">Andy Chen</h3>
+          <p class="admin__email text-gray-dark">andy0401@mail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="main px-4"><%- contents %></div>
+  </div>
 
-  <%- contents %>
-
-  <footer class="footer">
-    footer
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>

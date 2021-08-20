@@ -5,8 +5,239 @@ engine: ejs
 current: index
 ---
 
-<h1>
-  這是一段話
-</h1>
+<div class="navbar d-flex justify-content-between align-items-center py-6">
+  <div class="d-flex justify-content-start align-items-center">
+    <h2 class="me-5 fw-bold"> Admin</h2>
+    <button type="button" class="btn fw-bold" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+      <span class="material-icons me-2 text-secondary">add</span>
+      <span class="button-text">Add New Admin</span></button>
+  </div>
+  <div>
+    <span class="material-icons icon me-4">search</span>
+    <span class="material-icons icon">notifications</span>
+  </div>
+</div>
 
-<div class="box"></div>
+<table class="table admin__table mb-5">
+  <thead>
+    <tr class="fw-bold">
+      <th width="10%" class="admin-thead-th" scope="col">ID<span
+          class="material-icons text-success icon-arrow ms-1">arrow_downward</span>
+      </th>
+      <th width="25%" class="admin-thead-th" scope="col">Name</th>
+      <th width="35%" class="admin-thead-th" scope="col">Email</th>
+      <th width="20%" class="admin-thead-th" scope="col">Verified</th>
+      <th width="10%" class="admin-thead-th" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <th scope="row">#1</th>
+      <td>Emir Wicks</td>
+      <td>emir.wicks@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#2</th>
+      <td>Zaina Goldsmith</td>
+      <td>zaina.goldsmith@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#3</th>
+      <td>Mahima Lopez</td>
+      <td>mahima.lopez@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#4</th>
+      <td>Emir Wicks</td>
+      <td>emir.wicks@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#5</th>
+      <td>Zaina Goldsmith</td>
+      <td>zaina.goldsmith@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#6</th>
+      <td>Mahima Lopez</td>
+      <td>mahima.lopez@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#7</th>
+      <td>Emir Wicks</td>
+      <td>emir.wicks@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#8</th>
+      <td>Zaina Goldsmith</td>
+      <td>zaina.goldsmith@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#9</th>
+      <td>Mahima Lopez</td>
+      <td>mahima.lopez@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+    <tr>
+      <th scope="row">#10</th>
+      <td>Emir Wicks</td>
+      <td>emir.wicks@mail.com</td>
+      <td>YES</td>
+      <td><span class="material-icons pe-4">visibility</span><span class="material-icons">edit</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content AdminModal ">
+      <div class="modal-body p-0 d-flex test">
+        <img class="image" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emir.jpeg?raw=true"
+          alt="">
+        <div class="flex-grow-1 ms-4 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between">
+              <p class="mb-2">#1</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <p>Admin</p>
+            <h3 class="mb-2 fw-bold">Emir Wicks</h3>
+            <p class="email">emir.wicks@mail.com</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="verified px-2 py-1 bg-light">Verified</p>
+            <span class="material-icons text-secondary btn-expand">expand_more</span>
+          </div>
+          <div class="showing">
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-outline-danger py-2 px-6 fw-bold">Deactivate</button>
+              <button type="button" class="btn btn-success py-2 px-6 fw-bold">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+  「data-backdrop="static"」 鎖定背景，點擊背景時不自動關閉視窗
+  「fade」 淡入、淡出的轉場效果
+  「modal-lg」視窗大小，如modal-lg、modal-md、modal-sm
+  「data-dismiss="modal"」 關閉視窗
+  「data-keyboard="true"」 是否用ESC鍵關閉，預設為true
+  modal-dialog-scrollable  滾動獨立
+  modal-dialog-centered 垂直置中
+-->
+<!-- Modal -->
+<div class="modal fade" id="addAdminModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- Vertically centered scrollable modal -->
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content addAdminModal">
+      <div class="modal-header p-6 border-0">
+        <h3 class="modal-title fw-bold">New Admin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-6">
+        <form>
+          <div class="pb-4 mb-4 border-bottom">
+            <h4 class="mb-3 fw-bold">Account</h4>
+            <div class="mb-3">
+              <label for="account-name" class="form-label">Name</label>
+              <input type="text" class="form-control border-dark py-3" id="account-name">
+            </div>
+            <div>
+              <label for="account-email" class="form-label">Email</label>
+              <input type="text" class="form-control border-dark py-3" id="account-email"></input>
+            </div>
+          </div>
+          <div class="pb-4 mb-4 border-bottom">
+            <h4 class="mb-3 fw-bold">Verification</h4>
+            <p class="mb-3 fw-bold"><span class="material-icons text-danger me-2">warning</span>Unverified</p>
+            <button type="button" class="btn btn-outline-success w-100 btn-send py-3">Send Verification Mail</button>
+          </div>
+          <div class="pb-4 mb-4 border-bottom">
+            <h4 class="mb-3 fw-bold">Access Level</h4>
+            <select class="form-select p-3 text-gray-dark border-dark" aria-label="Default select example">
+              <option selected>-Choose access level-</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <h4 class="mb-3 fw-bold">Custom Access</h4>
+            <div class="form-check mb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckLecture">
+              <label class="form-check-label" for="flexCheckLecture">
+                Lecture
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckCoupon">
+              <label class="form-check-label" for="flexCheckCoupon">
+                Coupon
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckMessage">
+              <label class="form-check-label" for="flexCheckMessage">
+                Message
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckSetting">
+              <label class="form-check-label" for="flexCheckSetting">
+                Setting
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckTaskMenu">
+              <label class="form-check-label" for="flexCheckTaskMenu">
+                Task Menu
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer border-0 px-6 py-3">
+        <button type="button" class="btn btn-outline-success py-2 px-6" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success py-2 px-6">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="d-flex justify-content-end mb-6" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

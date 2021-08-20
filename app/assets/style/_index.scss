@@ -1,0 +1,100 @@
+.navbar {
+  h2 {
+    font-size: 24px;
+  }
+  .icon:hover {
+    color: $secondary;
+  }
+  .button-text:hover {
+    color: $secondary;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin__table {
+  .arrow {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    th {
+      padding-bottom: 4.5px;
+      padding-left: 0;
+    }
+    tr {
+      border-bottom: 1px solid $primary;
+    }
+  }
+  tbody {
+    th {
+      padding: 0;
+    }
+    td {
+      padding: 18px 0;
+    }
+    tr {
+      border-bottom: 1px solid $gray-400;
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+}
+.AdminModal {
+  padding: 32px;
+  .image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .email {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  .verified {
+    font-size: 14px;
+  }
+  .showing {
+    height: 0px;
+    transition: all 2s ease;
+    overflow: hidden;
+    &.active {
+      height: auto;
+    }
+  }
+}
+.addAdminModal {
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .btn-send {
+    border: 1px solid $gray-400;
+  }
+}
+
+.page-item {
+  .page-link {
+    color: $secondary;
+    border: 1px solid $secondary;
+    &:hover {
+      color: #fff;
+      background: $secondary;
+    }
+  }
+  &.active .page-link {
+    color: #fff;
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+}

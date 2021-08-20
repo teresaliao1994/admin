@@ -1,0 +1,32 @@
+.text-primary {
+  color: $primary !important;
+}
+.text-secondary {
+  color: $secondary !important;
+}
+.text-gray-light {
+  color: $gray-400;
+}
+.text-gray-dark {
+  color: $gray-600;
+}
+.bg-light {
+  background-color: $light;
+}
+.bg-gray {
+  background-color: $gray-400;
+}
+.p-6 {
+  padding: 32px;
+}
+.py-6 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.px-6 {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.mb-6 {
+  margin-bottom: 32px;
+}
